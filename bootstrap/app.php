@@ -60,6 +60,8 @@ $app->singleton(\Kirby\Cms\App::class, function () {
             'plugins' => base_path('cms/plugins'),
             'templates' => resource_path('views/templates'),
             'snippets' => resource_path('views/snippets'),
+            'accounts' => base_path('cms/accounts'),
+            'sessions' => storage_path('kirby/sessions')
         ],
     ]);
 });
