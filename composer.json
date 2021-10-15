@@ -11,7 +11,15 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "ext-ctype": "*",
+        "ext-mbstring": "*",
+        "claviska/simpleimage": "3.6.3",
+        "laminas/laminas-escaper": "2.7.0",
+        "michelf/php-smartypants": "1.8.1",
+        "mustangostang/spyc": "0.6.3",
+        "phpmailer/phpmailer": "6.5.0",
+        "true/punycode": "2.1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -54,7 +62,6 @@
             "dont-discover": []
         },
         "include_files": [
-            "app/helpers.php",
             "cms/kirby/config/helpers.php"
         ]
     },
