@@ -4,8 +4,10 @@ This is an experimental starter kit for using Kirby within Laravel (a little lik
 
 ### Implementation
 
-- A custom helper file (`app/helpers.php`) is loaded that sets `e()` equivalent to Laravel, Kirby’s helper file is then loaded. This allows Kirby’s `e()` to be overriden without modifying it’s source.
-- Kirby is bootstrapped in `bootstrap/app.php`.
+The implementation is fairly simple: anything Laravel doesn't want, pass to Kirby.
+
+- Kirby is imported as a submodule in `cms/kirby` - you can checkout any Kirby version you like.
+- `Kirby\Cms\App` is bootstrapped in `bootstrap/app.php`.
 - All routes that are not caught by Laravel are rendered by Kirby. See `routes/web.php`.
 - Kirby-specific URLs are excluded from the CSRF middleware. See `app/Http/Middleware/VerifyCsrfToken.php`.
 
@@ -29,3 +31,8 @@ You can change the folder structure in `bootstrap/app.php`, but I have set an op
 ### Blade Templating
 
 There is a simple plugin that allows you to use `.blade.php` files for Kirby templates and snippets. These files should be put in their respective directories within `resources/views`.
+
+### Weirdness
+
+- If Kirby's helpers are imported normally within Composer, they cannot override Laravel's global helpers. This causes a few errors. To combat this I've used `funkjedi/composer-include-files` which autoloads files before anything else.
+- Laravel seems to use the global `e()` helper for views, so overriding this with Kirby's `e()` causes problems. As a hack-y workaround, I import `app/helpers.php`, which defines `e()` as Laravel's implentation, before loading the Kirby helpers... I know.
