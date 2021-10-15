@@ -54,7 +54,7 @@ $app->singleton(\Kirby\Cms\App::class, function () {
             'site' => base_path('cms/site'),
             'blueprints' => resource_path('blueprints'),
             'config' => config_path('kirby'),
-            'kirby' => base_path('kirby'),
+            'kirby' => base_path('cms/kirby'),
             'logs' => storage_path('logs/kirby'),
             'media' => public_path('media'),
             'plugins' => base_path('cms/plugins'),
