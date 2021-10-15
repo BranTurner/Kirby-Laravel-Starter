@@ -64,7 +64,8 @@
         },
         "include_files": [
             "app/helpers.php",
-            "cms/kirby/config/helpers.php"
+            "cms/kirby/config/helpers.php",
+            "cms/kirby/config/setup.php"
         ]
     },
     "config": {
