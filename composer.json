@@ -63,6 +63,7 @@
             "dont-discover": []
         },
         "include_files": [
+            "app/helpers.php",
             "cms/kirby/config/helpers.php"
         ]
     },
