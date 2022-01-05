@@ -14,14 +14,14 @@ This is an experimental starter kit for using Kirby within Laravel (a little lik
 
 The implementation is fairly simple: anything Laravel doesn't want, pass to Kirby.
 
-- Kirby is imported as a submodule in `cms/kirby` - you can checkout any Kirby version you like.
-- `Kirby\Cms\App` is bootstrapped in `bootstrap/app.php`.
-- All routes that are not caught by Laravel are rendered by Kirby. See `routes/web.php`.
+- Kirby is imported as a submodule in `cms/kirby` - the current Kirby version is Kirby 3.6.1.
+- `Kirby\Cms\App` is bootstrapped in the `KirbyServiceProvider`.
+- All routes that are not caught by Laravel are rendered by Kirby.
 - Kirby-specific URLs are excluded from the CSRF middleware. See `app/Http/Middleware/VerifyCsrfToken.php`.
 
 ### Folder Structure/Kirby Roots
 
-You can change the folder structure in `bootstrap/app.php`, but I have set an opinionated default.
+You can change the folder structure in `KirbyServiceProvider`, but I have set an opinionated default.
 
 - Accounts: `cms/accounts`
 - Blueprints: `resources/blueprints`

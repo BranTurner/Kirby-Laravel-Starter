@@ -43,31 +43,6 @@ $app->singleton(
 
 /*
 |--------------------------------------------------------------------------
-| Bootstrap Kirby
-|--------------------------------------------------------------------------
-*/
-
-$app->singleton(\Kirby\Cms\App::class, function () {
-    return new \Kirby\Cms\App([
-        'roots' => [
-            'content' => base_path('content'),
-            'site' => base_path('cms/site'),
-            'blueprints' => resource_path('blueprints'),
-            'config' => config_path('kirby'),
-            'kirby' => base_path('cms/kirby'),
-            'logs' => storage_path('logs/kirby'),
-            'media' => public_path('media'),
-            'plugins' => base_path('cms/plugins'),
-            'templates' => resource_path('views/templates'),
-            'snippets' => resource_path('views/snippets'),
-            'accounts' => base_path('cms/accounts'),
-            'sessions' => storage_path('kirby/sessions')
-        ],
-    ]);
-});
-
-/*
-|--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------
 |

@@ -16,13 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::any('/{all}', function () {
-    $response = resolve(\Kirby\Cms\App::class)->render();
-
-    return response($response)
-        ->setStatusCode($response->code())
-        ->withHeaders([
-            'Content-Type' => $response->type(),
-        ]);
-})->where('all', '.*');
