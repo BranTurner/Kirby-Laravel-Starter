@@ -7,6 +7,8 @@ This is an experimental starter kit for using Kirby within Laravel (a little lik
 1. Download or clone this repo.
 2. If you're using Laravel Valet, then modify `.valet-env.php`
 3. Ensure the Kirby Git submodule is cloned *or* download Kirby and place it in `cms/kirby`
+4. Run `composer update`
+5. Create the `.env` file for your application
 
 ### Implementation
 
