@@ -2,6 +2,12 @@
 
 This is an experimental starter kit for using Kirby within Laravel (a little like Statamic). In my limited experience it runs smoothly, but please be ready for some *weird* bugs.
 
+## Installation
+
+1. Download or clone this repo.
+2. If you're using Laravel Valet, then modify `.valet-env.php`
+3. Ensure the Kirby Git submodule is cloned *or* download Kirby and place it in `cms/kirby`
+
 ### Implementation
 
 The implementation is fairly simple: anything Laravel doesn't want, pass to Kirby.
