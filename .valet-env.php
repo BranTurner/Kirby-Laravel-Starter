@@ -15,8 +15,8 @@
 // @todo: replace the following with your site info.
 
 return [
-    'your-site-key' => [
-        'SERVER_NAME' => 'your-site-domain.test',
+    'pkm' => [
+        'SERVER_NAME' => 'pkm.test',
         'SCRIPT_NAME' => '/'
     ]
 ];
