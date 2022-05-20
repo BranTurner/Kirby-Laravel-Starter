@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Kirby\Cms\App as Kirby;
+use App\Cms\Kirby;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route as Route;
 
